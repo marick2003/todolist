@@ -3,12 +3,11 @@
     <img src="./assets/logo.png">
     <router-view/>
     <div class="menu">
-      <ul>
-        <li><a href="#/page1">page1</a></li>
-        <li></li>
-        <li></li>
-      </ul>
-
+    
+    <!--router -->
+    <router-link to="/">index</router-link>
+    <router-link to="/page1">Go page1 </router-link>
+    <div>{{username}}</div>
     </div>
     <ListView></ListView>
   </div>
@@ -21,6 +20,13 @@ export default {
   components:{ //
 
     ListView
+  },
+  computed:{
+      username () {
+            // 我们很快就会看到 `params` 是什么
+            return this.$route.name;
+     }
+     
   }
 }
 </script>

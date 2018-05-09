@@ -12,7 +12,12 @@
             return{
                 title: "page1"
             }
-        }
+        },
+        computed: {
+
+        //alert("HelloWorld");
+        
+         }
     }
 </script>
 <style lang="">
