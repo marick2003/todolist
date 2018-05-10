@@ -4,7 +4,7 @@
         <input type="text" v-model="newTodo" @keyup.enter="addTodo" >
 
         <ul>
-            <li v-for="item in items" v-bind:class="{finesh:item.isFineshed}" @click="toggleFinish(item)">{{item.text}}</li>
+            <li v-for="item in items" v-bind:class="{finesh:item.isFineshed}"  v-bind:key="{finesh:item}"     @click="toggleFinish(item)">{{item.text}}</li>
         </ul>
     </div>
 </template>
@@ -46,6 +46,11 @@ export default {
                     text: value
 
                 });
+               
+
+                ///將子組件傳遞給父組件
+                //觸發myMsg事件 並傳遞參數
+                this.$emit('myMsg',this.newTodo);
                 this.newTodo="";
 
         },
@@ -58,7 +63,7 @@ export default {
     },
     computed: {
 
-
+        
         
     }
 

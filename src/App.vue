@@ -1,7 +1,12 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+
+
+
     <router-view/>
+    <!-- 父組件給子組件傳遞-->
+    <HeaderView :msg="title"></HeaderView>
     <div class="menu">
     
     <!--router -->
@@ -9,17 +14,26 @@
     <router-link to="/page1">Go page1 </router-link>
     <div>{{username}}</div>
     </div>
-    <ListView></ListView>
+    
+    <!-- 組件使用 -->
+    <ListView @myMsg='getData'></ListView>
   </div>
 </template>
 
 <script>
 import ListView from './components/List'
+import HeaderView from './components/Header'
+
+//App.vue 是父組件 , listview
+//父組件--->子組件 props
+//子組件--->父組件 自訂事件
+
+
 export default {
   name: 'App',
   components:{ //
 
-    ListView
+    ListView,HeaderView
   },
   computed:{
       username () {
@@ -27,6 +41,21 @@ export default {
             return this.$route.name;
      }
      
+  },data(){
+
+
+    return {
+
+      title: "vuelook"
+    }
+  },
+  methods: {
+    getData(msg){
+
+      console.log("來自組件:"+msg);
+    }
+
+
   }
 }
 </script>
