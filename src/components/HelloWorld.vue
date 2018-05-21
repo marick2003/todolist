@@ -91,9 +91,14 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
+  created () {
+    // 
+    // 
+    alert("set hello world");
+  },
   computed: {
 
-      //alert("HelloWorld");
+     // alert("HelloWorld");
         
     }
 }
