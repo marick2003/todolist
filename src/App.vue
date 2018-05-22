@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <preloading></preloading>
     <img src="./assets/logo.png">
 
 
@@ -23,7 +24,7 @@
 <script>
 import ListView from './components/List'
 import HeaderView from './components/Header'
-
+// import preloadImage from 'vue-preload-image'
 //App.vue 是父組件 , listview
 //父組件--->子組件 props
 //子組件--->父組件 自訂事件

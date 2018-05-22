@@ -1,6 +1,12 @@
 <template>
+
+    <div class="page1">
+
     <div>
        {{'title: '+title}}
+    </div>
+        <button>click hello world</button>
+
     </div>
 </template>
 <script>
@@ -18,6 +24,16 @@
 
          // alert("page1");
         
+         },
+         methods:{
+
+             callfun: function(){
+                 
+
+                 return;
+             }
+
+
          }
     }
 </script>
