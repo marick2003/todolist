@@ -27,14 +27,20 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      redirect:'/HelloWorld'
     },
     {
       path: '/page1',
       name: 'page1',
       component: page1
 
+    },
+    {
+      path:'/HelloWorld',
+      name: 'HelloWorld',
+      component: HelloWorld
+
     }
-  ]
+  ],
+  linkActiveClass: 'active'
 })

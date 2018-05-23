@@ -53,17 +53,10 @@ export default {
     methods:{
 
         fetchData () {
+         
           this.error = this.post = null
           this.loading = true
-          // replace `getPost` with your data fetching util / API wrapper
-          getPost(this.$route.params.id, (err, post) => {
-            this.loading = false
-            if (err) {
-              this.error = err.toString()
-            } else {
-              this.post = post
-            }
-          })
+          
         }
 
     }

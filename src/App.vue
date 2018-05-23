@@ -1,6 +1,13 @@
 <template>
   <div id="app">
-    <preloading></preloading>
+    <div class="preloader">
+      <div class="preloader__status">
+          <div status class="preloader__status-text">I'm {{loaded}} % done!</div>
+          <div class="preloader__status-loader">
+            <div loader :style="loadStyle" class="preloader__status-bar"></div>
+          </div>
+      </div>
+    </div>
     <img src="./assets/logo.png">
 
 
@@ -11,8 +18,8 @@
     <div class="menu">
     
     <!--router -->
-    <router-link to="/">index</router-link>
-    <router-link to="/page1">Go page1 </router-link>
+    <router-link to="/HelloWorld"> index </router-link>
+    <router-link to="/page1"> page1 </router-link>
     <div>{{username}}</div>
     </div>
     
@@ -69,5 +76,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.active{
+
+  color: sandybrown; 
 }
 </style>
